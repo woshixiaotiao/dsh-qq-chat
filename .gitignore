@@ -1,0 +1,22 @@
+# 本地配置（含 token / QQ 号，绝不提交）
+config/bot-bridge.json
+config/*.local.json
+*.local.*
+
+# 运行产物
+out/
+logs/
+*.log
+
+# 数据与凭据
+*.sqlite
+*.db
+*.reg
+.env
+.env.*
+
+# 系统垃圾
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini

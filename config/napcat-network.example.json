@@ -1,0 +1,33 @@
+{
+  "_comment": "NapCat 的 onebot11_<BOT_QQ>.json 里的 network 段示例。token 两处必须一致；建议用 src/napcat-onebot-setup.mjs 自动写入。",
+  "network": {
+    "httpServers": [
+      {
+        "name": "dsh-api",
+        "enable": true,
+        "host": "127.0.0.1",
+        "port": 3000,
+        "enableCors": true,
+        "enableWebsocket": false,
+        "messagePostFormat": "array",
+        "token": "REPLACE_WITH_RANDOM_TOKEN",
+        "debug": false
+      }
+    ],
+    "httpSseServers": [],
+    "httpClients": [
+      {
+        "name": "dsh-callback",
+        "enable": true,
+        "url": "http://127.0.0.1:19390/onebot",
+        "messagePostFormat": "array",
+        "reportSelfMessage": false,
+        "token": "REPLACE_WITH_RANDOM_TOKEN",
+        "debug": false
+      }
+    ],
+    "websocketServers": [],
+    "websocketClients": [],
+    "plugins": []
+  }
+}

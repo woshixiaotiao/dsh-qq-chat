@@ -1,0 +1,49 @@
+{
+  "dsh": {
+    "session": "new",
+    "sessionFile": "out/bot-session.json",
+    "cwd": "D:\\AI\\日常",
+    "replyTimeoutMs": 180000
+  },
+  "onebot": {
+    "api": "http://127.0.0.1:3000",
+    "token": "REPLACE_WITH_RANDOM_TOKEN"
+  },
+  "reply": {
+    "sendBack": true,
+    "maxChars": 1200,
+    "noReplyText": "（DeepSeek 这次没有产出回复，稍后再试）"
+  },
+  "logFile": "out/bot-bridge.log",
+  "callback": {
+    "path": "/onebot",
+    "port": 19390,
+    "host": "127.0.0.1"
+  },
+  "trigger": {
+    "mode": "all",
+    "keyword": ["小D", "小d", "ds"],
+    "allowFrom": ["REPLACE_WITH_MAIN_QQ"],
+    "groups": false
+  },
+  "rotation": {
+    "enabled": true,
+    "everyMessages": 120,
+    "everyHours": 24,
+    "pressureTokens": 150000,
+    "costYuan": 2.5,
+    "cwd": "D:\\AI\\日常",
+    "outDir": "D:\\AI\\日常\\QQ机器人\\交接",
+    "index": "D:\\AI\\日常\\QQ机器人\\README.md",
+    "rotateScript": "D:\\AI\\DSH\\tools\\qq\\qq-bot-rotate.mjs",
+    "stateFile": "out/bot-state.json",
+    "pendingFile": "out/bot-pending-handoff.json"
+  },
+  "balance": {
+    "enabled": true,
+    "endpoint": "http://127.0.0.1:50281/x-balance",
+    "tokenFile": "C:\\Users\\<you>\\.dsh\\balance-widget.json",
+    "floorYuan": 30,
+    "checkSeconds": 300
+  }
+}
